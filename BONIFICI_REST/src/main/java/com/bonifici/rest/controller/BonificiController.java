@@ -205,9 +205,9 @@ public class BonificiController {
         result.put("messages", new JSONArray());
         result.put("outcome", "SUCCESS");
         result.put("requestId", getRequestId(24));
-        totalAmount.put("amount", importo);
+        totalAmount.put("amount", String.valueOf(importo).replace(".",","));
         totalAmount.put("currency", divisa);
-        commissions.put("commissions", commissione);
+        commissions.put("commissions", String.valueOf(commissione).replace(".",","));
         commissions.put("currency", divisa);
         data.put("totalAmount", totalAmount);
         data.put("commissions", commissions);
